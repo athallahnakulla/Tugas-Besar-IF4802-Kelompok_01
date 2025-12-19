@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include "header.h"
 
@@ -52,3 +53,12 @@ address_penumpang findElemenChild(address_ojol O, string infop){
     }
     return C;
 }
+
+void showDriverDetail(address_ojol O){
+    cout << O->info_ojol.nama_ojol << endl;
+    cout << O->info_ojol.jenis_kendaraan << endl;
+    cout << O->info_ojol.plat_nomor << endl;
+    cout << O->info_ojol.status << endl;
+}
+
+
