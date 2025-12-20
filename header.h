@@ -68,6 +68,18 @@ void deleteAfterChild(address_ojol O, address_penumpang prec, address_penumpang 
 address_penumpang findElemenChild(address_ojol O, string infop);
 void viewChild(address_ojol O);
 bool isEmptyPenumpang(address_ojol O);
+void showDriverDetail(address_ojol O);
+void showAvailableDrivers();
+void orderOjol(address_ojol &O);
+void showMyOrder(address_ojol O);
+void cancelMyOrder(address_ojol &O, address_penumpang &P);
+void showOrderStatistics();
+void showPassengersAboveInputAge();
+address_ojol findDriverByArea(list_ojol &LO, string area);
+int countPassengers(address_ojol O);
+void menuDeleteOjolMostPassengersByArea(list_ojol &LO);
+void finishOrderOjol(address_ojol &O);
+int countOjolByArea(list_ojol LO, string area);
 
 int main_admin();
 int main_user();

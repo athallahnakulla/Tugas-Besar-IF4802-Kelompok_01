@@ -18,7 +18,6 @@ address_ojol createElemenParent(infotype_ojol x){
     P->info_ojol.plat_nomor = x.plat_nomor;
     P->info_ojol.jenis_kendaraan = x.jenis_kendaraan;
     P->info_ojol.noHP = x.noHP;
-    P->info_ojol.status = x.status;
     P->info_ojol.daerah_operasi = x.daerah_operasi;
     P->info_ojol.umur_ojol = x.umur_ojol;
     P->next = nullptr;
@@ -62,19 +61,20 @@ void viewParent(list_ojol L) {
         address_ojol P = L.first;
         int i = 1;
 
-        cout << "==============================" << endl;
+        cout << "\n==============================" << endl;
         while (P != NULL) {
             cout << "Data Ojek ke-" << i << endl;
-            cout << "Nama Ojek   : " << P->info_ojol.nama_ojol << endl;
+            cout << "Nama Ojek          : " << P->info_ojol.nama_ojol << endl;
 
-            // Hitung jumlah penumpang
             int count = 0;
             address_penumpang C = P->first_penumpang;
             while (C != NULL) {
                 count++;
                 C = C->next;
             }
-            cout << "Jumlah Penumpang: " << count << endl;
+            cout << "Daerah Operasi     : " << P->info_ojol.daerah_operasi << endl;
+            cout << "Jenis Kendaraan    : " << P->info_ojol.jenis_kendaraan << endl;
+            cout << "Banyak Penumpang   : " << count << endl;
 
             cout << "==============================" << endl;
 
@@ -85,11 +85,6 @@ void viewParent(list_ojol L) {
 }
 
 void dataDump(list_ojol &LO) {
-
-    // ==========================
-    // 10 DATA PARENT MANUAL
-    // ==========================
-
     infotype_ojol o1 = {"Budi", "D1234AA", "Motor", "0811", "Aktif", "Bandung", 30};
     infotype_ojol o2 = {"Andi", "D5678BB", "Motor", "0822", "Aktif", "Bandung", 27};
     infotype_ojol o3 = {"Sandi", "D1111CC", "Mobil", "0833", "Nonaktif", "Cimahi", 35};

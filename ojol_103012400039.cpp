@@ -53,6 +53,5 @@ address_ojol findElemenParent(list_ojol &LO, string info){
     return nullptr;
 }
 
-bool isDriverAvailable(address_ojol O){
-    return O->info_ojol.status == "Aktif";
-}
+
+
